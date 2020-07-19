@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on GoFolium | Hugo Publication Template</title>
+    <link>https://roshaansiddiqui.com/projects/</link>
+    <description>Recent content in Projects on GoFolium | Hugo Publication Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2020 Roshaan Siddiqui</copyright>
+    <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate>
+    
+	<atom:link href="https://roshaansiddiqui.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WesEvents | Crossplatform Web A</title>
+      <link>https://roshaansiddiqui.com/projects/wes-events/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://roshaansiddiqui.com/projects/wes-events/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Energy Skate | iOS &amp; Web Game</title>
+      <link>https://roshaansiddiqui.com/projects/energy-skate/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://roshaansiddiqui.com/projects/energy-skate/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Coronavirus Video Annotation Tool | Web Application</title>
+      <link>https://roshaansiddiqui.com/projects/coronavirus-video-annotation-tool/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://roshaansiddiqui.com/projects/coronavirus-video-annotation-tool/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Presidential Candidate Digital Ad Spending Visualization | Web Application</title>
+      <link>https://roshaansiddiqui.com/projects/presidential-candidate-ad-spending-visualization/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://roshaansiddiqui.com/projects/presidential-candidate-ad-spending-visualization/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Electronic Waiver Widget | Web Application</title>
+      <link>https://roshaansiddiqui.com/projects/electronic-waiver-tool/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://roshaansiddiqui.com/projects/electronic-waiver-tool/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Come Thru | iOS App</title>
+      <link>https://roshaansiddiqui.com/projects/comethru/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://roshaansiddiqui.com/projects/comethru/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>UltraShineCar | Website design</title>
+      <link>https://roshaansiddiqui.com/projects/ultra-shine-car-website.1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://roshaansiddiqui.com/projects/ultra-shine-car-website.1/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+  </channel>
+</rss>
