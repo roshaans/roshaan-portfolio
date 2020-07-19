@@ -1,0 +1,11 @@
+themes/
+.history/
+.vscode/
+static/
+resources/
+layouts/
+data/
+content/
+archetypes/
+i18n/
+config.toml
