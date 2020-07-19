@@ -1,0 +1,105 @@
+######################## default configuration ####################
+baseURL = "https://roshaansiddiqui.com"
+title = "GoFolium | Hugo Publication Template"
+theme = "gofolium"
+# post pagination
+paginate = "5"
+# post excerpt
+summaryLength = "10"
+# disable language
+disableLanguages = [] # desable language from here
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/particles/particles.min.js"
+[[params.plugins.js]]
+link = "plugins/particles/stats.min.js"
+[[params.plugins.js]]
+link = "plugins/reading-time/readingTime.min.js"
+
+
+############################## navigation ###############################
+
+# main menu
+[[menu.main]]
+name = "home"
+URL = "home"
+weight = 1
+
+[[menu.main]]
+name = "about"
+URL = "about"
+weight = 2
+
+  
+[[menu.main]]
+name = "project"
+URL = "project"
+weight = 3
+  
+[[menu.main]]
+name = "blog"
+URL = "blog"
+weight = 4
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+# Meta data
+description = "A personal website."
+author = "Roshaan Siddiqui"
+# Google Analitycs
+google_analitycs_id = "UA-173008301-1" # your id
+
+# body particles
+particles = true
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "images/loading1.svg" # use jpg, png, svg or gif format.
+
+# Navigation button
+[params.navigation_button]
+enable = true
+label = "contact"
+link = "contact"
+  
+############################# social site ########################
+
+[[params.social]]
+title = "github"
+icon = "ti-github" # themify icon : https://themify.me/themify-icons
+link = "https://github.com/roshaans"
+
+[[params.social]]
+title = "linkedin"
+icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
+link = "https://www.linkedin.com/in/roshaan-siddiqui/"
+
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "Copyright &copy; 2020 Roshaan Siddiqui"
+

@@ -1,0 +1,26 @@
+<article class="card bg-dark rounded-0 border-0">
+  {{ with .Params.Image }} <img src="{{ . | absURL }}" alt="" class="card-img-top mb-4 rounded-0"> {{ end }}
+  <div class="card-body">
+    <h4 class="mb-3"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h4>
+    <p>{{ .Summary }}</p>
+    <!-- [themify_button link="url" style="large red rounded" target="_blank"]Text[/themify_button] -->
+    <div style = "display: flex; justify-content: space-between;">
+      <div style = "display: flex; flex-direction: column; justify-content: center">  
+    <a style = "font-size: 40px; display: flex; justify-content: center;" class="ti-github" href="{{.Params.link}}"></a>
+    <p> View Source</p>
+
+  </div>
+    <!-- <br/> -->
+    
+    <div style = "display: flex; flex-direction: column; justify-content: center"> 
+    <a style = "font-size: 40px; display: flex; justify-content: center;" class="ti-eye" href="{{.Params.live}}"></a>
+    <p> Live Project</p>
+
+    </div>
+    <!-- <br/> -->
+
+    </div>
+    
+    <!-- <link ></span>  -->
+  </div>
+</article>
