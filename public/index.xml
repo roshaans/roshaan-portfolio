@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hi! I&#39;m Roshaan 🤓</title>
+    <link>/</link>
+    <description>Recent content on Hi! I&#39;m Roshaan 🤓</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2020 Roshaan Siddiqui</copyright>
+    <lastBuildDate>Wed, 22 Jul 2020 15:40:24 +0600</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WesEvents| Crossplatform Web App</title>
+      <link>/projects/wes-events/</link>
+      <pubDate>Wed, 22 Jul 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/wes-events/</guid>
+      <description>A crossplatform web application to make event browsing easy for busy college students</description>
+    </item>
+    
+    <item>
+      <title>Energy Skate | iOS &amp; Web Game</title>
+      <link>/projects/energy-skate/</link>
+      <pubDate>Fri, 14 Feb 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/energy-skate/</guid>
+      <description>An iOS and browser game to teach kids about kinetic and potential energy</description>
+    </item>
+    
+    <item>
+      <title>Coronavirus Video Annotation Tool | Web Application</title>
+      <link>/projects/coronavirus-video-annotation-tool/</link>
+      <pubDate>Fri, 20 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/coronavirus-video-annotation-tool/</guid>
+      <description>A video annotation tool developed to help researchers and data analysts doing research on Covid 19&amp;rsquo;s media coverage</description>
+    </item>
+    
+    <item>
+      <title>Presidential Candidate Digital Ad Spending Visualization | Web Application</title>
+      <link>/projects/presidential-candidate-ad-spending-visualization/</link>
+      <pubDate>Tue, 14 Jul 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/presidential-candidate-ad-spending-visualization/</guid>
+      <description>A visualization tool with a timeline to explore and compare digital ad spending data of presidential candidates</description>
+    </item>
+    
+    <item>
+      <title>Electronic Waiver Widget | Web Application</title>
+      <link>/projects/electronic-waiver-tool/</link>
+      <pubDate>Tue, 14 Apr 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/electronic-waiver-tool/</guid>
+      <description>A tool that enables parents to sign liability waivers for their minors electronically through a text or email</description>
+    </item>
+    
+    <item>
+      <title>Come Thru | iOS App</title>
+      <link>/projects/comethru/</link>
+      <pubDate>Tue, 14 Apr 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/comethru/</guid>
+      <description>An event invitation iOS app for families</description>
+    </item>
+    
+    <item>
+      <title>UltraShineCar | Website design</title>
+      <link>/projects/ultra-shine-car-website.1/</link>
+      <pubDate>Thu, 16 Jul 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/ultra-shine-car-website.1/</guid>
+      <description>A custom website built from scatch using Webflow.</description>
+    </item>
+    
+    <item>
+      <title>Reasons Why Employees Quit | Human Resources Analytics</title>
+      <link>/blogs/blog-1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/blogs/blog-1/</guid>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules.</description>
+    </item>
+    
+    <item>
+      <title>Roshaan Siddiqui</title>
+      <link>/author/roshaan-siddiqui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/author/roshaan-siddiqui/</guid>
+      <description>Hello there, I am Roshaan. I am currently studying Computer Science at Wesleyan University and I intend to be a software engineer.</description>
+    </item>
+    
+  </channel>
+</rss>
