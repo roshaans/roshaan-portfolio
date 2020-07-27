@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on GoFolium | Hugo Publication Template</title>
+    <title>Projects on Hi! I&#39;m Roshaan.🤓</title>
     <link>https://roshaansiddiqui.com/projects/</link>
-    <description>Recent content in Projects on GoFolium | Hugo Publication Template</description>
+    <description>Recent content in Projects on Hi! I&#39;m Roshaan.🤓</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2020 Roshaan Siddiqui</copyright>
@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>WesEvents | Crossplatform Web A</title>
+      <title>WesEvents| Crossplatform Web App</title>
       <link>https://roshaansiddiqui.com/projects/wes-events/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://roshaansiddiqui.com/projects/wes-events/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>A crossplatform web application to make event searching easy for busy college students.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://roshaansiddiqui.com/projects/energy-skate/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>An iOS game to teach kids in grades 1st-5th about Kinetic and Potential Energy.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://roshaansiddiqui.com/projects/coronavirus-video-annotation-tool/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>👀📺 CoronaVirus News Annotation Tool Check out the application here! This project was created for the DeltaLab at Wesleyan University.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://roshaansiddiqui.com/projects/presidential-candidate-ad-spending-visualization/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>📊 Digital Ad Spending Visualation for Presidential Candidates  Play around with the visualization here!</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://roshaansiddiqui.com/projects/electronic-waiver-tool/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>This tool was created for MassVr so that minors who visit their locations without their parents can make their parents sign the liability waivers over text or email.</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://roshaansiddiqui.com/projects/comethru/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>👨‍👩‍👧‍👧Come Thru - Invite Your Family This was my first iOS application that I made using Swift and Xcode.</description>
     </item>
     
     <item>
