@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2020 Roshaan Siddiqui</copyright>
-    <lastBuildDate>Wed, 22 Jul 2020 15:40:24 +0600</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 15:34:04 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -73,6 +73,15 @@
       
       <guid>/projects/ultra-shine-car-website.1/</guid>
       <description>A custom website built from scatch using Webflow.</description>
+    </item>
+    
+    <item>
+      <title>Audio Fingerprinting: A Quick Startup guide</title>
+      <link>/blogs/audio-fingerprinting/</link>
+      <pubDate>Tue, 28 Jul 2020 15:34:04 -0500</pubDate>
+      
+      <guid>/blogs/audio-fingerprinting/</guid>
+      <description>Audio fingerprinting has been widely used for music and sound identification. This technology enables a user to record as little as 2 seconds of an audio signal and can identify the original sound that matches with the signal with ~95.6% certainty.</description>
     </item>
     
     <item>
