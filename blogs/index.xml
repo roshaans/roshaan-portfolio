@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>Audio Fingerprinting: A Quick Startup guide</title>
+      <title>Audio Fingerprinting: A Quick Startup Guide</title>
       <link>/blogs/audio-fingerprinting/</link>
       <pubDate>Tue, 28 Jul 2020 15:34:04 -0500</pubDate>
       
       <guid>/blogs/audio-fingerprinting/</guid>
-      <description>Audio fingerprinting has been widely used for music and sound identification. This technology enables a user to record as little as 2 seconds of an audio signal and can identify the original sound that matches with the signal with ~95.6% certainty.</description>
+      <description>Audio fingerprinting has been widely used for music and sound identification. This technology enables a user to record as little as 2 seconds of an audio signal and identify the original sound that matches the signal with ~95.6% certainty.</description>
     </item>
     
   </channel>

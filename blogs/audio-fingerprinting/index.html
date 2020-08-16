@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
   <meta charset="utf-8">
-  <title>Audio Fingerprinting: A Quick Startup guide</title>
+  <title>Audio Fingerprinting: A Quick Startup Guide</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -84,7 +84,7 @@
 <!-- /navigation -->
 	<section class="section">
   <div class="container text-left text-sm-center">
-    <h2>Audio Fingerprinting: A Quick Startup guide</h2>
+    <h2>Audio Fingerprinting: A Quick Startup Guide</h2>
   </div>
 </section>
 	
@@ -108,7 +108,7 @@
 <h4 id="what-is-audio-fingerprinting">What is Audio Fingerprinting?</h4>
 <p>Audio fingerprinting has been widely used for music and sound identification. This technology enables a user to record as little as 2 seconds of an audio signal and can identify the original sound that matches with the signal with ~95.6% certainty. This technology has also enabled various avenues of research such as identifying birds in the wild by using their unique acoustic signatures and help to mitigate privacy concerns for products like Amazon Echo, and Apple’s Siri that use voice commands to turn their services on.</p>
 <p>Audio fingerprinting represents a digital summary of an audio signal. The digital summary is created by identifying the most prominent parts of the audio signal. This is traditionally done by creating a spectrogram of the signal and then running a peak identification algorithm on it to extract the peaks. After this, surrounding peaks are used to create a unique hash signature which is then stored in a database.</p>
-<h5 id="for-a-thorough-review-of-this-topic-i-would-highly-reccomend-the-following-websites">For a thorough review of this topic, I would highly reccomend the following websites:</h5>
+<h5 id="for-a-thorough-review-of-this-topic-i-would-highly-recommend-the-following-websites">For a thorough review of this topic, I would highly recommend the following websites:</h5>
 <ol>
 <li><a href="https://www.youtube.com/watch?v=WhXgpkQ8E-Q&amp;t=2699s">A live example and lecture about audio fingerprinting</a></li>
 <li><a href="http://coding-geek.com/how-shazam-works/">A thorough guide for how Shazam Works</a></li>
@@ -116,11 +116,103 @@
 <li><a href="https://drive.google.com/file/d/1zxpGj5dbVAlt-Y2iwfL-G3xqZkdRywgm/view">Shazam&rsquo;s Audio Fingerprinting Research Paper</a></li>
 </ol>
 <h3 id="getting-started-with-audio-fingerprinting">Getting Started with Audio Fingerprinting</h3>
-<p>Even if you do not know much about audio fingerprinting, dont worry, you can still get started by using an opensource project called <strong>Dejavu</strong>. I would highly reccomend reading this article (Audio Fingerprinting with Python and Numpy)[https://willdrevo.com/fingerprinting-and-audio-recognition-with-python/] written by the author of Dejavu. It talks about the internal functions of the algorithm.</p>
+<p>Even if you do not know much about audio fingerprinting, don&rsquo;t worry, you can still get started by using an opensource project called <strong>Dejavu</strong>. I would highly reccomend reading this article (Audio Fingerprinting with Python and Numpy)[https://willdrevo.com/fingerprinting-and-audio-recognition-with-python/] written by the author of Dejavu before continuing as it explains the internal functions of the algorithm.</p>
 <p>From here, simply follow the ReadMe in the Github repository which will guide you to configure your setup with Docker.</p>
 <h3 id="my-experience-using-dejavu">My experience using Dejavu</h3>
-<p>I downloaded 15 30-minute segments from CBS 13, TV station based in Portland, Maine. After that, I split the 30 minute videos into 3 equal 10 minute chunks using Ffmpeg&rsquo;s audio module with Python. Then, I manually went into the videos and extracted small segments where the transitions came up. I fingerprinted these transitions into the Dejavu database so we can use these for identification purposes later. After this, I ran the Audio Identification algorithm on each 10 minute video segment and the algorithm gave me a time of where it believes the transition started in the 10 minute segment chunks. Finally, I manually cross checked the algorithm’s time offsets with the actual offsets to measure its accuracy.</p>
+<p>Initially, I had no clue that the Dejavu project existed. So logically, I spent two weeks trying to put together my very own audio fingerprinting algorithm by reading blog posts after blog posts. It worked, but the algorithm was very naive so to speak. Simply put, the entropy needed to generate a unique audio fingerprint was just not present in my approach. Sooner than later, I stumbled across Dejavu which solved all my headaches.</p>
+<p>I downloaded 15 30-minute segments from CBS 13, TV station based in Portland, Maine. After that, I split the 30-minute videos into 3 equal 10-minute chunks using Ffmpeg&rsquo;s audio module with Python(Code Below). Then, I manually went into the videos and extracted small segments where the news transitions came up. I fingerprinted these transitions into the Dejavu database so we can use these for identification purposes later. After this, I ran the Audio Identification algorithm on each 10-minute video segment and the algorithm gave me a time of where it believes the transition started in the 10-minute segment chunks. Finally, I manually cross-checked the algorithm’s time offsets with the actual offsets to measure its accuracy.</p>
 <blockquote>
+<p>Python Code to split video files into three 10-minute chunks.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> subprocess
+<span style="color:#f92672">import</span> os
+
+path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./test/FullVideos/&#39;</span>
+
+
+<span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(path):
+    <span style="color:#66d9ef">if</span> (filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#34;.mp4&#34;</span>)):
+        link <span style="color:#f92672">=</span> path <span style="color:#f92672">+</span> filename
+        outputLinkOne <span style="color:#f92672">=</span> filename<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;.&#34;</span>)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_part_1.mp4&#34;</span>
+        outputLinkTwo <span style="color:#f92672">=</span> filename<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;.&#34;</span>)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_part_2.mp4&#34;</span>
+        outputLinkThree <span style="color:#f92672">=</span> filename<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;.&#34;</span>)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_part_3.mp4&#34;</span>
+
+        subprocess<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#34;ffmpeg -i &#34;</span> <span style="color:#f92672">+</span>  link <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; -ss 00:00:00 -to 00:10:00 -c copy &#34;</span> <span style="color:#f92672">+</span>  outputLinkOne, shell<span style="color:#f92672">=</span>True)
+        subprocess<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#34;ffmpeg -i &#34;</span> <span style="color:#f92672">+</span>  link <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; -ss 00:10:00 -to 00:20:00 -c copy &#34;</span> <span style="color:#f92672">+</span>  outputLinkTwo, shell<span style="color:#f92672">=</span>True)
+        subprocess<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#34;ffmpeg -i &#34;</span> <span style="color:#f92672">+</span>  link <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; -ss 00:20:00 -to 00:30:00 -c copy &#34;</span> <span style="color:#f92672">+</span>  outputLinkThree, shell<span style="color:#f92672">=</span>True)
+</code></pre></div><blockquote>
+<p>Python Script to run the audio fingerprinting algorithm on data and create a spreadsheet with results</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> dejavu <span style="color:#f92672">import</span> Dejavu
+<span style="color:#f92672">from</span> dejavu.logic.recognizer.file_recognizer <span style="color:#f92672">import</span> FileRecognizer
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># load config from a JSON file (or anything outputting a python dictionary)</span>
+config <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#34;database&#34;</span>: {
+        <span style="color:#e6db74">&#34;host&#34;</span>: <span style="color:#e6db74">&#34;db&#34;</span>,
+        <span style="color:#e6db74">&#34;user&#34;</span>: <span style="color:#e6db74">&#34;postgres&#34;</span>,
+        <span style="color:#e6db74">&#34;password&#34;</span>: <span style="color:#e6db74">&#34;password&#34;</span>,
+        <span style="color:#e6db74">&#34;database&#34;</span>: <span style="color:#e6db74">&#34;dejavu&#34;</span>
+    },
+    <span style="color:#e6db74">&#34;database_type&#34;</span>: <span style="color:#e6db74">&#34;postgres&#34;</span>
+}
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+
+    <span style="color:#75715e"># create a Dejavu instance</span>
+    djv <span style="color:#f92672">=</span> Dejavu(config)
+
+    <span style="color:#75715e"># Fingerprint all the mp3&#39;s in the directory we give it</span>
+    djv<span style="color:#f92672">.</span>fingerprint_directory(<span style="color:#e6db74">&#34;mp3&#34;</span>, [<span style="color:#e6db74">&#34;.mp4&#34;</span>, <span style="color:#e6db74">&#34;mp3&#34;</span>])
+
+
+
+path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./test/&#39;</span>
+
+<span style="color:#75715e"># Create a dataframe</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;File&#34;</span>, <span style="color:#e6db74">&#34;Transition&#34;</span>,<span style="color:#e6db74">&#34;Total_time&#34;</span>, <span style="color:#e6db74">&#34;Fingerprint_Confidence&#34;</span>, <span style="color:#e6db74">&#34;Offset&#34;</span>, <span style="color:#e6db74">&#34;Hash&#34;</span>])
+runtime <span style="color:#f92672">=</span> []
+file_recognized <span style="color:#f92672">=</span> []
+transition_found <span style="color:#f92672">=</span> []
+fingerprint_confidence <span style="color:#f92672">=</span> []
+offsets <span style="color:#f92672">=</span> []
+hash <span style="color:#f92672">=</span> []
+
+<span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(path):
+    <span style="color:#66d9ef">if</span> (filename<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#34;.mp4&#34;</span>)):
+        results <span style="color:#f92672">=</span> djv<span style="color:#f92672">.</span>recognize(FileRecognizer, path<span style="color:#f92672">+</span>filename)
+        
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;Algorithm runtime: {str(results[&#39;total_time&#39;])} seconds&#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;File being recognized: {filename}&#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;Transition found: {results[&#39;results&#39;][0][&#39;song_name&#39;]}&#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;Fingerprint Confidence: {str(results[&#39;results&#39;][0][&#39;fingerprinted_confidence&#39;]*100)}%&#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;Offset: {str(results[&#39;results&#39;][0][&#39;offset_seconds&#39;] * -1)} minutes&#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;Fingerprint_sha1_signature: {str(results[&#39;results&#39;][0][&#39;file_sha1&#39;])}&#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;  &#34;</span>)
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;  &#34;</span>)
+        
+        <span style="color:#75715e"># Collect data inside arrays to eventually use as input to the dataframe </span>
+        runtime<span style="color:#f92672">.</span>append(results[<span style="color:#e6db74">&#39;total_time&#39;</span>])
+        file_recognized<span style="color:#f92672">.</span>append(filename)
+        transition_found<span style="color:#f92672">.</span>append(results[<span style="color:#e6db74">&#39;results&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;song_name&#39;</span>])
+        fingerprint_confidence<span style="color:#f92672">.</span>append(results[<span style="color:#e6db74">&#39;results&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;fingerprinted_confidence&#39;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>)
+        offsets<span style="color:#f92672">.</span>append(results[<span style="color:#e6db74">&#39;results&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;offset_seconds&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        hash<span style="color:#f92672">.</span>append(str(results[<span style="color:#e6db74">&#39;results&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;file_sha1&#39;</span>]))
+
+
+<span style="color:#75715e"># Put the data inside the dataframe</span>
+df[<span style="color:#e6db74">&#34;File&#34;</span>] <span style="color:#f92672">=</span> file_recognized
+df[<span style="color:#e6db74">&#34;Transition&#34;</span>] <span style="color:#f92672">=</span> transition_found
+df[<span style="color:#e6db74">&#34;Total_time&#34;</span>] <span style="color:#f92672">=</span> runtime
+df[<span style="color:#e6db74">&#34;Fingerprint_Confidence&#34;</span>] <span style="color:#f92672">=</span> fingerprint_confidence
+df[<span style="color:#e6db74">&#34;Offset&#34;</span>] <span style="color:#f92672">=</span> offsets
+df[<span style="color:#e6db74">&#34;Hash&#34;</span>] <span style="color:#f92672">=</span> hash
+
+<span style="color:#75715e"># Output results to a CSV</span>
+df<span style="color:#f92672">.</span>to_csv(<span style="color:#e6db74">&#34;Results.csv&#34;</span>)
+</code></pre></div><blockquote>
 <p>These were my results when I ran the algorithm on the segments</p>
 </blockquote>
 <table>
@@ -145,7 +237,7 @@
 </tr>
 </tbody>
 </table>
-<p>The algorithm identified the timing of the transitions in the beginning segments of the news data much better than it did compared to the middle and ending segments. The cause for such discrepancy might be in the fact that the transitions were slightly different throughout the news segments. One way to fix this would be  to identify unique transitions and put their fingerprints in the database. The algorithm also identified what kind of transition were identified. It almost always detected the sports transition as well as the weather report transition.</p>
+<p>The algorithm identified the timing of the transitions in the beginning segments of the news data much better than it did compared to the middle and ending segments. The cause for such discrepancy might be in the fact that the transitions were slightly different throughout the news segments. One way to fix this would be to identify unique transitions and put their fingerprints in the database. The algorithm also identified what kind of transition was identified. It almost always detected the sports transition as well as the weather report transition.</p>
 <h5 id="shazams-founder-chris-barton-discussing-the-creation-of-the-algorithm"><strong>Shazam&rsquo;s Founder Chris Barton discussing the creation of the algorithm</strong></h5>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
