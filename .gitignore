@@ -9,4 +9,4 @@ content/
 archetypes/
 i18n/
 config.toml
-public/
+public
