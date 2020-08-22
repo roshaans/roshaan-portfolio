@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>WesEvents| Crossplatform Web App</title>
-      <link>/projects/wes-events/</link>
-      <pubDate>Wed, 22 Jul 2020 15:40:24 +0600</pubDate>
+      <title>Facebook Ad Spending Visualization | Web App</title>
+      <link>/projects/presidential-candidate-ad-spending-visualization/</link>
+      <pubDate>Tue, 14 Jul 2020 15:40:24 +0600</pubDate>
       
-      <guid>/projects/wes-events/</guid>
-      <description>A crossplatform web application to make event browsing easy for busy college students</description>
+      <guid>/projects/presidential-candidate-ad-spending-visualization/</guid>
+      <description>An interactive timeline visualization to explore and compare Facebook ad spending data for Presidential candidates and other entities</description>
     </item>
     
     <item>
@@ -31,7 +31,16 @@
     </item>
     
     <item>
-      <title>Coronavirus Video Annotation Tool | Web Application</title>
+      <title>WesEvents| Crossplatform Mobile App</title>
+      <link>/projects/wes-events/</link>
+      <pubDate>Wed, 22 Jul 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/projects/wes-events/</guid>
+      <description>A crossplatform Mobile app to make event browsing easy for busy college students</description>
+    </item>
+    
+    <item>
+      <title>Coronavirus Video Annotation Tool | Web App</title>
       <link>/projects/coronavirus-video-annotation-tool/</link>
       <pubDate>Fri, 20 Mar 2020 15:40:24 +0600</pubDate>
       
@@ -40,16 +49,7 @@
     </item>
     
     <item>
-      <title>Facebook Ad Spending Visualization | Web Application</title>
-      <link>/projects/presidential-candidate-ad-spending-visualization/</link>
-      <pubDate>Tue, 14 Jul 2020 15:40:24 +0600</pubDate>
-      
-      <guid>/projects/presidential-candidate-ad-spending-visualization/</guid>
-      <description>A visualization tool with a timeline to explore and compare Facebook ad spending data for entities during the election cycle</description>
-    </item>
-    
-    <item>
-      <title>Electronic Waiver Widget | Web Application</title>
+      <title>Electronic Waiver Widget | Web App</title>
       <link>/projects/electronic-waiver-tool/</link>
       <pubDate>Tue, 14 Apr 2020 15:40:24 +0600</pubDate>
       
